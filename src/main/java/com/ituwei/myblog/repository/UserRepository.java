@@ -1,6 +1,8 @@
 package com.ituwei.myblog.repository;
 
 import com.ituwei.myblog.entity.user.User;
+import com.ituwei.myblog.exception.ResourceNotFoundException;
+import com.ituwei.myblog.security.UserPrincipal;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
