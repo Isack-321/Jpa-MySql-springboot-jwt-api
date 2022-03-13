@@ -2,6 +2,7 @@ package com.ituwei.myblog.config;
 import com.ituwei.myblog.repository.UserRepository;
 import com.ituwei.myblog.security.JwtAuthenticationEntryPoint;
 import com.ituwei.myblog.security.JwtAuthenticationFilter;
+import com.ituwei.myblog.service.impl.CustomUserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

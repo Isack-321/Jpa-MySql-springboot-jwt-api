@@ -14,7 +14,7 @@ public class ExceptionResponse {
     private List<String> messages;
     private Instant timestamp;
 
-    public ExceptionResponse(String error, Integer status, List<String> messages, Instant timestamp) {
+    public ExceptionResponse(List<String> messages, String error, Integer status) {
         this.error = error;
         this.status = status;
         this.messages = messages;

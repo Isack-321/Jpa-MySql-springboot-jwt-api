@@ -3,11 +3,11 @@ package com.ituwei.myblog.payload;
 import lombok.Data;
 
 @Data
-public class JwtAuthenticationRequest {
+public class JwtAuthenticationResponse {
     private String accessToken;
     private String tokenType="bearer";
 
-    public JwtAuthenticationRequest(String accessToken) {
+    public JwtAuthenticationResponse(String accessToken) {
         this.accessToken = accessToken;
     }
 }
