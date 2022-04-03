@@ -2,7 +2,7 @@ package com.ituwei.myblog.controller;
 
 import com.ituwei.myblog.payload.ApiResponse;
 import com.ituwei.myblog.payload.PagedResponse;
-import com.ituwei.myblog.payload.PhotoRequest;
+import com.ituwei.myblog.payload.request.PhotoRequest;
 import com.ituwei.myblog.payload.PhotoResponse;
 import com.ituwei.myblog.security.CurrentUser;
 import com.ituwei.myblog.security.UserPrincipal;

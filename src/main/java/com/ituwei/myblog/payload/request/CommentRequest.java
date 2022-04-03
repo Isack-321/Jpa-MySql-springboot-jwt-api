@@ -1,4 +1,4 @@
-package com.ituwei.myblog.payload;
+package com.ituwei.myblog.payload.request;
 
 
 import lombok.Data;
@@ -10,5 +10,5 @@ import javax.validation.constraints.Size;
 public class CommentRequest {
     @NotBlank
     @Size(min=10,message = "min of ten chars")
-    private String Body;
+    private String body;
 }

@@ -2,11 +2,11 @@ package com.ituwei.myblog.controller;
 
 import com.ituwei.myblog.entity.Comment;
 import com.ituwei.myblog.payload.ApiResponse;
-import com.ituwei.myblog.payload.CommentRequest;
+import com.ituwei.myblog.payload.request.CommentRequest;
 import com.ituwei.myblog.payload.PagedResponse;
 import com.ituwei.myblog.security.CurrentUser;
 import com.ituwei.myblog.security.UserPrincipal;
-import com.ituwei.myblog.service.CommentService;
+import com.ituwei.myblog.service.impl.CommentServiceImpl;
 import com.ituwei.myblog.utils.AppConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,8 +27,14 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/api/posts/{postId}/comments")
 public class CommentController {
+
+
+    private CommentServiceImpl commentService;
+
     @Autowired
-    private CommentService commentService;
+    public CommentController(CommentServiceImpl commentserviceImpl) {
+        this.commentService = commentserviceImpl;
+    }
 
     @GetMapping
     public ResponseEntity<PagedResponse<Comment>> getAllComments(@PathVariable(name = "postId") Long postId,
@@ -52,6 +58,7 @@ public class CommentController {
     @GetMapping("/{id}")
     public ResponseEntity<Comment> getComment(@PathVariable(name = "postId") Long postId,
                                               @PathVariable(name = "id") Long id) {
+
         Comment comment = commentService.getComment(postId, id);
 
         return new ResponseEntity<>(comment, HttpStatus.OK);

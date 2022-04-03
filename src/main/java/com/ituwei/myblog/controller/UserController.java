@@ -4,7 +4,7 @@ import com.ituwei.myblog.entity.Album;
 import com.ituwei.myblog.entity.Post;
 import com.ituwei.myblog.entity.user.User;
 import com.ituwei.myblog.payload.ApiResponse;
-import com.ituwei.myblog.payload.InfoRequest;
+import com.ituwei.myblog.payload.request.InfoRequest;
 import com.ituwei.myblog.payload.PagedResponse;
 import com.ituwei.myblog.payload.UserIdentityAvailability;
 import com.ituwei.myblog.payload.UserProfile;

@@ -8,7 +8,7 @@ import  com.ituwei.myblog.entity.Photo;
 import  com.ituwei.myblog.entity.role.RoleName;
 import  com.ituwei.myblog.payload.ApiResponse;
 import  com.ituwei.myblog.payload.PagedResponse;
-import  com.ituwei.myblog.payload.PhotoRequest;
+import com.ituwei.myblog.payload.request.PhotoRequest;
 import  com.ituwei.myblog.payload.PhotoResponse;
 import  com.ituwei.myblog.repository.AlbumRepository;
 import  com.ituwei.myblog.repository.PhotoRepository;

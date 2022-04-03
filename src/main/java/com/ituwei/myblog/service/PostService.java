@@ -3,7 +3,7 @@ package com.ituwei.myblog.service;
 import com.ituwei.myblog.entity.Post;
 import com.ituwei.myblog.payload.ApiResponse;
 import com.ituwei.myblog.payload.PagedResponse;
-import com.ituwei.myblog.payload.PostRequest;
+import com.ituwei.myblog.payload.request.PostRequest;
 import com.ituwei.myblog.payload.PostResponse;
 import com.ituwei.myblog.security.UserPrincipal;
 

@@ -2,6 +2,7 @@ package com.ituwei.myblog.service;
 
 import com.ituwei.myblog.entity.user.User;
 import com.ituwei.myblog.payload.*;
+import com.ituwei.myblog.payload.request.InfoRequest;
 import com.ituwei.myblog.security.UserPrincipal;
 
 public interface UserService {

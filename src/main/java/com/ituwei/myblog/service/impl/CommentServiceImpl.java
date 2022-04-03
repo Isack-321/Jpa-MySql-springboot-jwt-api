@@ -7,7 +7,7 @@ import com.ituwei.myblog.entity.Post;
 import com.ituwei.myblog.entity.role.RoleName;
 import com.ituwei.myblog.entity.user.User;
 import com.ituwei.myblog.payload.ApiResponse;
-import com.ituwei.myblog.payload.CommentRequest;
+import com.ituwei.myblog.payload.request.CommentRequest;
 import com.ituwei.myblog.payload.PagedResponse;
 import com.ituwei.myblog.repository.CommentRepository;
 import com.ituwei.myblog.repository.PostRepository;
@@ -38,14 +38,20 @@ public class CommentServiceImpl implements CommentService {
 
     private static final String COMMENT_DOES_NOT_BELONG_TO_POST = "Comment does not belong to post";
 
-    @Autowired
+
     private CommentRepository commentRepository;
 
-    @Autowired
+
     private PostRepository postRepository;
 
-    @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    public CommentServiceImpl(CommentRepository commentRepository, PostRepository postRepository, UserRepository userRepository) {
+        this.commentRepository = commentRepository;
+        this.postRepository = postRepository;
+        this.userRepository = userRepository;
+    }
 
     @Override
     public PagedResponse<Comment> getAllComments(Long postId, int page, int size) {

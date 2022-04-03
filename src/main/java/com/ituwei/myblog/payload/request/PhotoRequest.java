@@ -1,4 +1,4 @@
-package com.ituwei.myblog.payload;
+package com.ituwei.myblog.payload.request;
 
 
 import lombok.Data;

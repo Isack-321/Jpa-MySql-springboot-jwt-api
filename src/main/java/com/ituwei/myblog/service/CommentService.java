@@ -2,7 +2,7 @@ package com.ituwei.myblog.service;
 
 import com.ituwei.myblog.entity.Comment;
 import com.ituwei.myblog.payload.ApiResponse;
-import com.ituwei.myblog.payload.CommentRequest;
+import com.ituwei.myblog.payload.request.CommentRequest;
 import com.ituwei.myblog.payload.PagedResponse;
 import com.ituwei.myblog.security.UserPrincipal;
 

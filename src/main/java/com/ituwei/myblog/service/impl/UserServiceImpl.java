@@ -7,7 +7,7 @@ import com.ituwei.myblog.entity.user.User;
 import com.ituwei.myblog.exception.*;
 import com.ituwei.myblog.payload.*;
 import com.ituwei.myblog.entity.role.RoleName;
-import com.ituwei.myblog.entity.role.Role;
+import com.ituwei.myblog.payload.request.InfoRequest;
 import com.ituwei.myblog.repository.PostRepository;
 import com.ituwei.myblog.repository.RoleRepository;
 import com.ituwei.myblog.repository.UserRepository;

@@ -9,7 +9,7 @@ import com.ituwei.myblog.exception.ResourceNotFoundException;
 import com.ituwei.myblog.exception.UnauthorizedException;
 import com.ituwei.myblog.payload.ApiResponse;
 import com.ituwei.myblog.payload.PagedResponse;
-import com.ituwei.myblog.payload.PostRequest;
+import com.ituwei.myblog.payload.request.PostRequest;
 import com.ituwei.myblog.payload.PostResponse;
 import com.ituwei.myblog.repository.CategoryRepository;
 import com.ituwei.myblog.repository.PostRepository;
@@ -98,7 +98,7 @@ public class PostServiceImpl implements PostService {
 
         Pageable pageable = PageRequest.of(page, size, Sort.Direction.DESC, CREATED_AT);
 
-        Page<Post> posts = postRepository.findByTags(Collections.singletonList(tag), pageable);
+        Page<Post> posts = postRepository.findByTagsIn(Collections.singletonList(tag), pageable);
 
         List<Post> content = posts.getNumberOfElements() == 0 ? Collections.emptyList() : posts.getContent();
 
